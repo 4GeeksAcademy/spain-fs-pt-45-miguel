@@ -12,3 +12,6 @@ function regularExpenses(category, description, amount, date) {
 }
 
 console.log(regularExpenses('cafe', '4kilos', 20, '13/7/23'));
+console.log(regularExpenses('cafe', '4kilos', 20, '13/7/23'));
+console.log(regularExpenses('cafe', '4kilos', 20, '13/7/23'));
+console.log(listOfExpenses)
