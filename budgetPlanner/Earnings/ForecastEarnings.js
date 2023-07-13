@@ -1,4 +1,4 @@
-//Para ejecutar = $ node ForecastEarnings.js
+//Para ejecutar = $ node /workspaces/spain-fs-pt-45/budgetPlanner/Earnings/ForecastEarnings.js
 
 const prompt = require('prompt-sync')({ sigint: true });
 
