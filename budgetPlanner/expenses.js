@@ -11,7 +11,7 @@ function regularExpenses(category, description, amount, date) {
   return newExpense;
 }
 
-console.log(regularExpenses('cafe', '4kilos', 20, '13/7/23'));
-console.log(regularExpenses('cafe', '4kilos', 20, '13/7/23'));
-console.log(regularExpenses('cafe', '4kilos', 20, '13/7/23'));
+regularExpenses('cafe', '4kilos', 20, '13/7/23');
+regularExpenses('ron', '4kilos', 20, '13/7/23');
+regularExpenses('vodka', '4kilos', 20, '13/7/23');
 console.log(listOfExpenses)
