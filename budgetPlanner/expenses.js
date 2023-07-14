@@ -24,7 +24,7 @@ function calculateTotalAmount() {
 // Gastos añadidos de ejemplo
 
 regularExpenses('Food', 'Lidl', 50, '2023-07-13');
-regularExpenses('Car', 'Gasoline', 30, '2023-07-14');
+regularExpenses('Car', 'Gas', 30, '2023-07-14');
 regularExpenses('Home', 'Electricty bill', 80, '2023-07-15');
 
 // Se guarda el valor total en una variable
