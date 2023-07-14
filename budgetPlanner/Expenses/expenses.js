@@ -11,7 +11,18 @@ function regularExpenses(category, description, amount, date) {
   return newExpense;
 }
 
-regularExpenses('cafe', '4kilos', 20, '13/7/23');
-regularExpenses('ron', '4kilos', 20, '13/7/23');
-regularExpenses('vodka', '4kilos', 20, '13/7/23');
-console.log(listOfExpenses)
+function calculateTotalAmount() {
+  let total = 0;
+  for (let i = 0; i < listOfExpenses.length; i++) {
+    total += listOfExpenses[i].amount;
+  }
+  return total;
+}
+
+// Example expenses
+regularExpenses('Food', 'Groceries', 50, '2023-07-13');
+regularExpenses('Transportation', 'Gasoline', 30, '2023-07-14');
+regularExpenses('Utilities', 'Electricity bill', 80, '2023-07-15');
+
+const totalAmount = calculateTotalAmount();
+console.log('Total amount of expenses:', totalAmount);
