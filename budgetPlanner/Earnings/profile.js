@@ -16,6 +16,12 @@ function saveUserProfile(userProfile) {
   fs.writeFileSync('userProfile.json', JSON.stringify(userProfile));
 }
 
+// Función para calcular el total de dinero del usuario
+function calculateTotalMoney(user) {
+  const { currency, actualEarning, monthlyEarning, forecastTime, casualEarning } = user;
+  return actualEarning + (monthlyEarning * forecastTime) + casualEarning;
+}
+
 // Función para solicitar y actualizar los datos del usuario
 function updateUserData() {
   const userProfile = loadUserProfile();
@@ -43,6 +49,7 @@ function updateUserData() {
   saveUserProfile(userProfile);
 
   console.log('Profile updated successfully!');
+  console.log(`Total money: ${calculateTotalMoney(userProfile[username])}`);
 }
 
 // Función principal
