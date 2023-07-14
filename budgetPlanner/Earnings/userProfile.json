@@ -1,5 +1,6 @@
 {
     "Noé": {
+        "id": 1,
         "currency": "$",
         "actualEarning": 5555,
         "monthlyEarning": 5555,
@@ -7,6 +8,7 @@
         "casualEarning": 55
     },
     "Raul": {
+        "id": 2,
         "currency": "€",
         "actualEarning": 55,
         "monthlyEarning": 6454,

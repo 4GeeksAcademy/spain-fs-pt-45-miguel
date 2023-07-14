@@ -23,7 +23,14 @@ function calculateTotalMoney(user) {
 }
 
 function getLastId (usersObject){
+let lastId = 0;
 
+const values = Object.values(usersObject);
+
+values.forEach(({id}) => {
+ lastId = Math.max(lastId, id)
+})
+  return lastId;
 }
 // Función para solicitar y actualizar los datos del usuario
 function updateUserData() {
@@ -41,8 +48,10 @@ function updateUserData() {
     casualEarning = Number(prompt('How much extra money do you earn? '));
   }
 
-  userProfile[username] = {
-    id: 1,
+  const id = getLastId(userProfile) + 1 
+
+  userProfile[id] = {
+    id,
     currency,
     actualEarning,
     monthlyEarning,
