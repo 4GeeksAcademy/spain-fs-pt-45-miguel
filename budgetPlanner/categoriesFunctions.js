@@ -97,7 +97,7 @@ const prompt = require('prompt-sync')({ sigint: true });
 
 const option = prompt(`What do you want to do?
 Include a new category (I)
-Remove a category (D)
+Remove a category (R)
 See the current categories (S)
 Edit an existing category (E)`);
 
