@@ -2,11 +2,15 @@
 
 const prompt = require('prompt-sync')({ sigint: true });
 
-function userLog(name, money, monthEarn) {
-    this.name = name;
-    this.money = money;
-    this.monthEarn = monthEarn;
-  };
+var Raul = {
+    
+}
+
+// function userLog(name, money, monthEarn) {
+//     this.name = name;
+//     this.money = money;
+//     this.monthEarn = monthEarn;
+//   };
 
   let userRaul = new userLog("Raul", 2000, 1000)
 
