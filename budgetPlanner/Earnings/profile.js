@@ -18,10 +18,13 @@ function saveUserProfile(userProfile) {
 
 // Función para calcular el total de dinero del usuario
 function calculateTotalMoney(user) {
-  const { currency, actualEarning, monthlyEarning, forecastTime, casualEarning } = user;
+  const { actualEarning, monthlyEarning, forecastTime, casualEarning } = user;
   return actualEarning + (monthlyEarning * forecastTime) + casualEarning;
 }
 
+function getLastId (usersObject){
+
+}
 // Función para solicitar y actualizar los datos del usuario
 function updateUserData() {
   const userProfile = loadUserProfile();
@@ -39,12 +42,15 @@ function updateUserData() {
   }
 
   userProfile[username] = {
+    id: 1,
     currency,
     actualEarning,
     monthlyEarning,
     forecastTime,
     casualEarning
   };
+
+
 
   saveUserProfile(userProfile);
 
