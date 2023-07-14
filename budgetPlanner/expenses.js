@@ -11,7 +11,6 @@ function regularExpenses(category, description, amount, date) {
   };
   listOfExpenses.push(newExpense);
 }
-
 // Esta funcion suma  todos los gastos almacenados en el array
 function calculateTotalAmount() {
   let total = 0;
