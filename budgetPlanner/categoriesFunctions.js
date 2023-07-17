@@ -1,5 +1,5 @@
-const cat = ['food', 'services', 'housing', 'education'];
-const categories = [...cat];
+const currentCat = ['food', 'services', 'housing', 'education'];
+const categories = [...currentCat];
 
 function include(list_categories) {
   let new_category = prompt(`Please type the name of the new category: `);
@@ -30,7 +30,7 @@ function include(list_categories) {
 }
 
 function remove(list_categories) {
-  // Remove a category logic goes here
+
   let rem_category = prompt(`Please type the name of the category that you want to remove: `);
   let counter = 0;
 
@@ -55,7 +55,7 @@ function remove(list_categories) {
 
 
 function show(list_categories) {
-  // Show current categories logic goes here
+
   console.log(`Here are the current categories
   ${list_categories.join(', ')}`)
 }
