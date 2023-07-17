@@ -1,4 +1,5 @@
-let categories = ['food', 'services', 'housing', 'education'];
+const cat = ['food', 'services', 'housing', 'education'];
+const categories = [...cat];
 
 function include(list_categories) {
   let new_category = prompt(`Please type the name of the new category: `);
@@ -64,11 +65,11 @@ function edit(list_categories) {
   The current categories are: ${list_categories.join(', ')}
   Which one do you want to edit?`);
   let counter = 1;
-    while (!list_categories.includes(category_edit.toLowerCase()) && counter < 5) {
+    while (!list_categories.includes(category_edit.toLowerCase()) && counter < 4) {
       category_edit = prompt(`The category "${category_edit}" doesn't exist. Please enter a valid category to edit.`);
       counter ++;
     }
-      if (counter == 5) {
+      if (counter == 4) {
     const categoriesList = list_categories.join(', ');
     rem_category = prompt(`It looks like you forgot the current categories: ${list_categories}. Please enter a category that is in the list`);
     if (!list_categories.includes(category_edit.toLowerCase())) {
@@ -77,19 +78,20 @@ function edit(list_categories) {
     }
   }
   
-    const updatedCategory = prompt(`Enter the updated name for the category "${category_edit}":`);
+    let updatedCategory = prompt(`Enter the updated name for the category "${category_edit}":`);
     let new_count = 0
-    while (list_categories.includes(updatedCategory.toLowerCase()) && new_count < 2) {
-        category_edit = prompt(`The category "${updatedCategory}" is already in the currnt categories. Please enter a valid category to edit.`);
-        new_count ++;
+    while (list_categories.includes(updatedCategory.toLowerCase()) && new_count <= 1) {
+      updatedCategory = prompt(`The category "${updatedCategory}" is already in the current categories. Please enter a valid category to edit.`);
+      new_count ++;
       }
     if (new_count == 2){
-        console.log(`You don't have any more opportunities.`);
+        console.log(`The category already exits. You don't have any more opportunities.`);
+        console.log(list_categories)
         return list_categories;
     }
     const categoryIndex = list_categories.findIndex(category => category.toLowerCase() === category_edit.toLowerCase());
     list_categories[categoryIndex] = updatedCategory.toLowerCase();
-  
+    console.log(list_categories)
     return list_categories;
   }
 
@@ -105,7 +107,7 @@ switch (option) {
   case "I":
     include(categories);
     break;
-  case "D":
+  case "R":
     remove(categories);
     break;
   case "S":
