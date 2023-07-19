@@ -8,7 +8,6 @@ function regularExpenses(category, description, amount, date) {
     date: date
   };
   listOfExpenses.push(newExpense);
-  return newExpense;
 }
 
 function calculateTotalAmount() {
@@ -26,3 +25,4 @@ regularExpenses('Utilities', 'Electricity bill', 80, '2023-07-15');
 
 const totalAmount = calculateTotalAmount();
 console.log('Total amount of expenses:', totalAmount);
+console.log(listOfExpenses)
