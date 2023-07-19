@@ -40,4 +40,3 @@ const withObjects = ({ id }) => ({ something: id });
 
 
 console.log(subtractTwoNumbers(8, 4));
->>>>>>> origin/dev
