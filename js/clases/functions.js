@@ -15,6 +15,7 @@ function addTwoNumbers (n1, n2) { // Shadowing
     return result;
 }
 
+
 // console.log(addTwoNumbers(1, 2));
 // console.log(addTwoNumbers(n1, n2));
 
