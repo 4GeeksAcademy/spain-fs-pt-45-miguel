@@ -48,7 +48,7 @@ function getUserId(user) {
     usersData.forEach(({}))
 */
 
-}
+
 function getUsersNames(){
     const usersNamesArray = []
 
