@@ -63,5 +63,11 @@ regularExpenses({
 
 
 const totalAmount = calculateTotalAmount();
+
+const calculateTotalBalance = () =>{
+    
+}
+
+const totalBalance =
 console.log('Total amount of expenses:', totalAmount);
 console.log(listOfExpenses)
