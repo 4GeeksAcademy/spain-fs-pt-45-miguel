@@ -1,3 +1,7 @@
+const loadUserProfileFile = require('/workspaces/spain-fs-pt-45-miguel/budgetPlanner/Earnings/trackingEarnings.json');
+
+const usersData = loadUserProfileFile();
+
 const listOfExpenses = [];
 
 function regularExpenses({
@@ -64,10 +68,14 @@ regularExpenses({
 
 const totalAmount = calculateTotalAmount();
 
-const calculateTotalBalance = () =>{
-    
-}
 
-const totalBalance =
+// ingresos + gastos
+
+
+const totalBalance = usersData[index].actualEarning - totalAmount;
+
+
+console.log(balanceRaul)
 console.log('Total amount of expenses:', totalAmount);
 console.log(listOfExpenses)
+console.log('This is your total balance:',totalBalance);

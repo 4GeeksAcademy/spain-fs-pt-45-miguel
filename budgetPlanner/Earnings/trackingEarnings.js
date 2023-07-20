@@ -1,11 +1,11 @@
 const prompt = require('prompt-sync')({ sigint: true });
 const fs = require('fs');
-
+module.exports = loadUserProfileFile;
 //Second Functions
 
 function loadUserProfileFile() {
     try {
-        const data = fs.readFileSync('/workspaces/spain-fs-pt-45-Raul-Gimenez/budgetPlanner/Earnings/userProfile.json');
+        const data = fs.readFileSync('/workspaces/spain-fs-pt-45-miguel/budgetPlanner/Earnings/userProfile.json');
         return JSON.parse(data);
     } catch (error) {
         return {};
@@ -15,7 +15,7 @@ const usersData = loadUserProfileFile();
 
 function saveNewUserProfile(userProfile) {
     usersData.push(userProfile);
-    fs.writeFileSync('/workspaces/spain-fs-pt-45-Raul-Gimenez/budgetPlanner/Earnings/userProfile.json', JSON.stringify(usersData));
+    fs.writeFileSync('/workspaces/spain-fs-pt-45-miguel/budgetPlanner/Earnings/userProfile.json', JSON.stringify(usersData));
 }
 
 function calculateTotalMoney(user) {
