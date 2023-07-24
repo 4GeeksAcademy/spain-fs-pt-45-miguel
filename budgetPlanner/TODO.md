@@ -17,14 +17,4 @@
 1. Signin
 1. Profile
 
-## CATEGORIES
-
-1. ...
-
-## EARNINGS
-
-1. ...
-
-## EXPENSES
-
-1. ...
+## CATEGORIESg
